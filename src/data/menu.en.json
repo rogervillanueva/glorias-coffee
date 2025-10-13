@@ -1,0 +1,50 @@
+{
+  "sections": [
+    {
+      "title": "Hot Drinks",
+      "items": [
+        {
+          "id": "latte",
+          "name": "Latte",
+          "desc": "Espresso with steamed milk",
+          "prices": [
+            { "size": "12 oz", "amount": 3.75 },
+            { "size": "16 oz", "amount": 4.25 }
+          ],
+          "tags": ["classic"]
+        },
+        {
+          "id": "americano",
+          "name": "Americano",
+          "desc": "Espresso + hot water",
+          "prices": [{ "size": "12 oz", "amount": 2.75 }],
+          "tags": []
+        }
+      ]
+    },
+    {
+      "title": "Cold Drinks",
+      "items": [
+        {
+          "id": "coldbrew",
+          "name": "Cold Brew",
+          "desc": "Slow-steeped, smooth",
+          "prices": [{ "size": "16 oz", "amount": 4.0 }],
+          "tags": ["seasonal"]
+        }
+      ]
+    },
+    {
+      "title": "Pastries",
+      "items": [
+        {
+          "id": "croissant",
+          "name": "Butter Croissant",
+          "desc": "Flaky, baked daily",
+          "prices": [{ "size": "each", "amount": 3.25 }],
+          "tags": []
+        }
+      ]
+    }
+  ]
+}
