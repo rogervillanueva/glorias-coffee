@@ -115,6 +115,7 @@ export default function Home() {
           {[
             { label: "About", href: "#about" },
             { label: "Menu Highlights", href: "#menu" },
+            { label: "Order Online", href: "/order" },
             { label: "Gallery", href: "#gallery" },
             { label: "Visit", href: "#visit" },
             { label: "Contact", href: "#contact" },
@@ -236,6 +237,14 @@ export default function Home() {
                 Our rotating menu features ethically sourced beans, house-made syrups, and seasonal collaborations with local
                 makers. Here’s a taste of what’s brewing.
               </p>
+              <div className="mt-6 flex justify-center">
+                <a
+                  href="/order"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[var(--color-cream)] shadow-lg shadow-[rgba(166,101,63,0.35)] transition hover:-translate-y-0.5"
+                >
+                  Order Online
+                </a>
+              </div>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
               {highlights.map((highlight) => (

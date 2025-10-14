@@ -60,6 +60,16 @@ export function CheckoutView() {
 
   return (
     <div className="min-h-screen bg-[var(--color-page-bg)] pb-24">
+      <header className="sticky top-0 z-40 border-b border-white/50 bg-white/70 backdrop-blur">
+        <div className="mx-auto flex w-full max-w-5xl justify-end px-6 py-3">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-full border border-[var(--color-deep)]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-deep)] transition hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)]"
+          >
+            Gloria’s Coffee
+          </Link>
+        </div>
+      </header>
       <section className="bg-[var(--color-deep)]/95 py-14 text-[var(--color-cream)]">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-6">
           <p className="text-xs uppercase tracking-[0.5em] text-[var(--color-accent-soft)]">Checkout</p>
