@@ -196,6 +196,18 @@ export default function Home() {
                   </p>
                 </div>
               ))}
+              <div className="rounded-3xl bg-[var(--color-accent-soft)]/70 p-6 shadow-[0_10px_30px_rgba(46,31,26,0.08)]">
+                <h3 className="text-lg font-semibold text-[var(--color-deep)]">Order Online</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--color-ink)]/75">
+                  Customize drinks, choose modifiers, and send your order ahead with our new digital bar.
+                </p>
+                <a
+                  href="/order"
+                  className="mt-4 inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-cream)] shadow-lg shadow-[rgba(166,101,63,0.35)] transition hover:-translate-y-0.5"
+                >
+                  Start Order
+                </a>
+              </div>
             </div>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_25px_60px_rgba(46,31,26,0.18)]">
