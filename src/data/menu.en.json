@@ -8,17 +8,81 @@
           "name": "Latte",
           "desc": "Espresso with steamed milk",
           "prices": [
-            { "size": "12 oz", "amount": 3.75 },
-            { "size": "16 oz", "amount": 4.25 }
+            { "size": "12 oz", "amount": 3.75, "default": true },
+            { "size": "16 oz", "amount": 4.25 },
+            { "size": "20 oz", "amount": 4.95 }
           ],
-          "tags": ["classic"]
+          "tags": ["classic"],
+          "modifiers": [
+            {
+              "id": "milk",
+              "name": "Milk Choice",
+              "type": "single",
+              "required": true,
+              "description": "Choose your milk preference",
+              "options": [
+                { "id": "whole", "label": "Whole Milk" },
+                { "id": "oat", "label": "Oat Milk", "priceDelta": 0.5 },
+                { "id": "almond", "label": "Almond Milk", "priceDelta": 0.5 },
+                { "id": "coconut", "label": "Coconut Milk", "priceDelta": 0.75 }
+              ]
+            },
+            {
+              "id": "espresso",
+              "name": "Espresso Options",
+              "type": "single",
+              "description": "Customize the espresso base",
+              "options": [
+                { "id": "regular", "label": "Signature Espresso", "description": "Balanced and sweet" },
+                { "id": "decaf", "label": "Swiss Water Decaf" },
+                { "id": "extra", "label": "Extra Shot", "priceDelta": 1.25 }
+              ]
+            },
+            {
+              "id": "sweetener",
+              "name": "Sweetener",
+              "type": "multiple",
+              "max": 2,
+              "description": "Choose up to two house-made syrups",
+              "options": [
+                { "id": "vanilla", "label": "Madagascar Vanilla" },
+                { "id": "agave", "label": "Organic Agave" },
+                { "id": "canelita", "label": "Canelita Syrup", "priceDelta": 0.5 },
+                { "id": "no-sweetener", "label": "No Sweetener" }
+              ]
+            }
+          ]
         },
         {
           "id": "americano",
           "name": "Americano",
           "desc": "Espresso + hot water",
-          "prices": [{ "size": "12 oz", "amount": 2.75 }],
-          "tags": []
+          "prices": [
+            { "size": "8 oz", "amount": 2.5 },
+            { "size": "12 oz", "amount": 2.95, "default": true }
+          ],
+          "modifiers": [
+            {
+              "id": "espresso",
+              "name": "Espresso Options",
+              "type": "single",
+              "options": [
+                { "id": "regular", "label": "Signature Espresso" },
+                { "id": "decaf", "label": "Swiss Water Decaf" }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Extras",
+              "type": "multiple",
+              "description": "Enhance your cup",
+              "options": [
+                { "id": "cinnamon", "label": "Cinnamon Sprinkle" },
+                { "id": "orange", "label": "Orange Zest", "priceDelta": 0.35 },
+                { "id": "cream", "label": "Splash of Cream" }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -29,8 +93,44 @@
           "id": "coldbrew",
           "name": "Cold Brew",
           "desc": "Slow-steeped, smooth",
-          "prices": [{ "size": "16 oz", "amount": 4.0 }],
-          "tags": ["seasonal"]
+          "prices": [
+            { "size": "16 oz", "amount": 4.0, "default": true },
+            { "size": "20 oz", "amount": 4.75 }
+          ],
+          "tags": ["seasonal"],
+          "modifiers": [
+            {
+              "id": "milk",
+              "name": "Milk or Cream",
+              "type": "single",
+              "options": [
+                { "id": "black", "label": "Serve Black" },
+                { "id": "oat", "label": "Oat Milk", "priceDelta": 0.5 },
+                { "id": "sweet-cream", "label": "Vanilla Sweet Cream", "priceDelta": 0.75 }
+              ]
+            },
+            {
+              "id": "sweetener",
+              "name": "Sweetener",
+              "type": "single",
+              "options": [
+                { "id": "none", "label": "Unsweetened" },
+                { "id": "piloncillo", "label": "Piloncillo Syrup", "priceDelta": 0.5 },
+                { "id": "seasonal", "label": "Seasonal Syrup", "priceDelta": 0.75 }
+              ]
+            },
+            {
+              "id": "add-ins",
+              "name": "Add-Ins",
+              "type": "multiple",
+              "max": 2,
+              "options": [
+                { "id": "coldfoam", "label": "Cold Foam", "priceDelta": 1.0 },
+                { "id": "cocoa", "label": "Cocoa Dust" },
+                { "id": "citrus", "label": "Candied Citrus", "priceDelta": 0.65 }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -41,8 +141,30 @@
           "id": "croissant",
           "name": "Butter Croissant",
           "desc": "Flaky, baked daily",
-          "prices": [{ "size": "each", "amount": 3.25 }],
-          "tags": []
+          "prices": [{ "size": "each", "amount": 3.25, "default": true }],
+          "tags": [],
+          "modifiers": [
+            {
+              "id": "warm",
+              "name": "Serving Preference",
+              "type": "single",
+              "options": [
+                { "id": "room-temp", "label": "Room Temperature" },
+                { "id": "warmed", "label": "Warm it up" }
+              ]
+            },
+            {
+              "id": "spreads",
+              "name": "Spreads",
+              "type": "multiple",
+              "max": 2,
+              "options": [
+                { "id": "butter", "label": "Cultured Butter", "priceDelta": 0.5 },
+                { "id": "strawberry", "label": "Strawberry Preserves", "priceDelta": 0.75 },
+                { "id": "no-spread", "label": "No Spread" }
+              ]
+            }
+          ]
         }
       ]
     }
